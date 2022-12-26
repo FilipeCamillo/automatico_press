@@ -36,6 +36,7 @@ frontend_node_build() {
 
   sudo su - deploy <<EOF
   cd /home/deploy/${instancia_add}/frontend
+  sudo cp /home/deploy/${instancia_add}/frontend/src/config.json /home/deploy/${instancia_add}/frontend/src/config.json.example
   npm install
   npm run build
 EOF
