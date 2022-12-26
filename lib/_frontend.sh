@@ -60,6 +60,7 @@ frontend_update() {
   pm2 stop ${instancia_add}-frontend
   git pull
   cd /home/deploy/${instancia_add}/frontend
+  sudo cp /home/deploy/${instancia_add}/frontend/src/config.json /home/deploy/${instancia_add}/frontend/src/config.json.example
   npm install
   rm -rf build
   npm run build
@@ -118,27 +119,6 @@ EOF
 }
 
 
-
-#######################################
-# sets frontend environment variables
-# Arguments:
-#   None
-#######################################
-frontend_set_env() {
-  print_banner
-  printf "${WHITE} 💻 Configurando config.json (frontend)...${GRAY_LIGHT}"
-  printf "\n\n"
-
-  sleep 2
-
-
-sudo su - deploy << EOF
-  cat <<[-]EOF > sudo cp /frontend/src/config.json /frontend/src/config.json.example
-[-]EOF
-EOF
-
-  sleep 2
-}
 
 #######################################
 # starts pm2 for frontend
