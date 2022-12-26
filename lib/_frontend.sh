@@ -117,6 +117,29 @@ EOF
   sleep 2
 }
 
+
+
+#######################################
+# sets frontend environment variables
+# Arguments:
+#   None
+#######################################
+frontend_set_env() {
+  print_banner
+  printf "${WHITE} 💻 Configurando config.json (frontend)...${GRAY_LIGHT}"
+  printf "\n\n"
+
+  sleep 2
+
+
+sudo su - deploy << EOF
+  cat <<[-]EOF > sudo cp /frontend/src/config.json /frontend/src/config.json.example
+[-]EOF
+EOF
+
+  sleep 2
+}
+
 #######################################
 # starts pm2 for frontend
 # Arguments:
