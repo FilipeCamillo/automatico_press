@@ -5,6 +5,7 @@
 # color
 readonly RED="\033[1;31m"
 readonly GREEN="\033[1;32m"
+readonly ORANGE="\033[1;33m"
 readonly BLUE="\033[1;32m"
 readonly WHITE="\033[1;37m"
 readonly YELLOW="\033[1;33m"
